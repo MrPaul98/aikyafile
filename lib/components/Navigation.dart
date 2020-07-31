@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:demoakiya/components/app_bar.dart';
-import 'package:demoakiya/components/drawer.dart';
 import 'package:demoakiya/screen/home.dart';
 class Navigation extends StatefulWidget {
   @override
@@ -12,7 +11,7 @@ class _NavigationState extends State<Navigation> {
 
   int _selectedIndex = 0;
   static List<Widget> _widgetOptions = <Widget>[
-    home(),
+    Home_screen(),
     // this is tempo **
     Center(child: Text('live')),
     Center(child: Text('eat')),
@@ -27,8 +26,8 @@ class _NavigationState extends State<Navigation> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: appbar(),
-      drawer: drawer(),
+     // appBar: appbar(),
+     // drawer: drawer(),
       body: IndexedStack(index: _selectedIndex,children: _widgetOptions,),
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[

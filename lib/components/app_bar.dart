@@ -4,11 +4,11 @@ Widget appbar()
 {
   return AppBar(
     elevation: 0.0,
-    backgroundColor: Colors.grey[850],
+    backgroundColor: Colors.white,
     title: Center(
       child: Padding(
           padding: const EdgeInsets.fromLTRB(0,0,176,0),
-      child: Text('Home'),
+      child: Text('Home',style: TextStyle(color: Colors.black),),
     ),
     ),
     actions: <Widget>[
